@@ -5,6 +5,8 @@ A fully functional Ai text-to-image Generator making use of huggingface.co's Ope
 
 Written in HTML, CSS, and Javascript. This project served as more of a deeper dive into my skills with Javascript. Playing around with different AI models and API's has renewed my interset in the field.
 
+- [Live Version](https://lioscar58.github.io/ai-txt-img-priv/)
+
 
 ## Screenshots 
 
