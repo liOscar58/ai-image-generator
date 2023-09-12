@@ -35,11 +35,11 @@ async function generateImages(input){
         const prompt = `${input} ${randomNum}`;
 
         const response = await fetch(
-            "https://api-inference.huggingface.co/models/prompthero/openjourney",
+            "https://api-inference.huggingface.co/models/prompthero/openjourney-v4",
             {
                 headers: { Authorization: "Bearer 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" },
                 method: "POST",
-                body: JSON.stringify(data),
+                body: JSON.stringify(prompt),
             }
         );
 
@@ -54,7 +54,6 @@ async function generateImages(input){
         const img = document.createElement("img");
         img.src = imgUrl;
         img.alt = `art-${i + 1}`;
-        img.onclick = () => downloadImage(imgUrl, i);
         document.getElementById("image-grid").appendChild(img);
     }
 
@@ -69,10 +68,3 @@ document.getElementById("generate").addEventListener('click', () => {
     generateImages(input);
 });
 
-function downloadImage(imgUrl, imageNumber) {
-    const link = document.createElement("a");
-    link.href = imgUrl;
-    // Set filename based on the selected image
-    link.download = `image-${imageNumber + 1}.jpg`;
-    link.click();
-}

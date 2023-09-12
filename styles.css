@@ -71,12 +71,6 @@ button:hover{
     margin: 10px 0;
 }
 
-button:disabled, button[disabled]{
-    border: 1px solid #999;
-    background-color: #ccc;
-    color: #666;
-    cursor: auto;
-}
 
 .result{
     margin-top: 10px;
@@ -107,26 +101,3 @@ button:disabled, button[disabled]{
     border-color: #675afe;
 }
 
-.container::before{
-    content: "";
-    position: absolute;
-    background-color: #ed2ff0;
-    width: 120px;
-    height: 120px;
-    filter: blur(140px);
-    left: -20%;
-    top: 10%;
-    z-index: -1000;
-}
-
-.container::after{
-    content: "";
-    position: absolute;
-    background-color: #675afe;
-    width: 120px;
-    height: 120px;
-    filter: blur(140px);
-    right: -20%;
-    bottom: -10%;
-    z-index: -1000;
-}
