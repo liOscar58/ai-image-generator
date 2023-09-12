@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "VT323", cursive;
+
+}
+
+body{
+    background: #2a2b32;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    position: relative;
+    width: 40rem;
+    color: #fff;
+    background: #616161;
+    padding: 20px 30px;
+    border-radius: 16px;
+    box-shadow: 0 1px 30px;
+
+}
+
+h1{
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #ffffff;
+}
+
+p{
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1rem;
+    text-align: justify;
+}
+
+input{
+    width: 80%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 0 15px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+
+}
+
+input:hover, input:focus{
+    border-color: #675afe;
+}
+
+
+
+button:hover{
+    background: #675afe;
+    border-color: transparent;
+}
+
+#loading{
+    display: none;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+button:disabled, button[disabled]{
+    border: 1px solid #999;
+    background-color: #ccc;
+    color: #666;
+    cursor: auto;
+}
+
+.result{
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#image-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+    max-width: 80%;
+}
+
+#image-grid img{
+    max-width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#image-grid img:hover{
+    border-color: #675afe;
+}
+
+.container::before{
+    content: "";
+    position: absolute;
+    background-color: #ed2ff0;
+    width: 120px;
+    height: 120px;
+    filter: blur(140px);
+    left: -20%;
+    top: 10%;
+    z-index: -1000;
+}
+
+.container::after{
+    content: "";
+    position: absolute;
+    background-color: #675afe;
+    width: 120px;
+    height: 120px;
+    filter: blur(140px);
+    right: -20%;
+    bottom: -10%;
+    z-index: -1000;
+}

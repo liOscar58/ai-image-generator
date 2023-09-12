@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>AI Satble Diffusion Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Ai Stable Diffusion Image Generator</h1>
+        <p>Write prompt for text to image generator here. Be as descriptive as possible to ensure the best results</p>
+        <form class="gen-form">
+            <input type="text" id="image-prompt", placeholder="Enter image prompt here" autocomplete="off">
+            <button type="button" id="generate">generate</button>
+        </form>
+
+        <div class="result">
+            <div id="loading">Generating image...</div>
+            <div id="image-grid"></div>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
