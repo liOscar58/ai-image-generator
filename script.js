@@ -35,9 +35,9 @@ async function generateImages(input){
         const prompt = `${input} ${randomNum}`;
 
         const response = await fetch(
-            "https://api-inference.huggingface.co/models/prompthero/openjourney-v4",
+            "",
             {
-                headers: { Authorization: "Bearer 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" },
+                headers: { Authorization: "" },
                 method: "POST",
                 body: JSON.stringify(prompt),
             }
